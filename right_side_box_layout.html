@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Right Side Box Example</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .right-box {
+      background-color: var(--cream);
+      color: black;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      font-family: 'Proxima Nova', Arial, sans-serif;
+      text-align: left;
+    }
+    .right-box p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="logo.png" alt="Logo" class="logo-icon" />
+      <span class="logo-text">charity: water</span>
+    </div>
+    <div class="top-bar">
+      <nav class="nav-menu">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Projects</a>
+  <a href="#">Contact Us</a>
+  <a href="#">Resources</a>
+  <a href="#">Sign In</a>
+</nav>
+      <button class="donate-button">Donate</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <div class="left-panel">
+        <h1>Clean Water Gets Built. And It Starts Here.</h1>
+        <p class="description">Give once. Change lives. Your support delivers lasting clean water and measurable impact to the people who need it most.</p>
+
+        <div class="donation-panel">
+          <div class="amount-buttons">
+            <button>$10 USD</button>
+            <button>$15 USD</button>
+            <button>$25 USD</button>
+            <input type="number" class="amount-button-input" placeholder="Enter Amount" min="1" />
+          </div>
+
+          <div class="payment-icons">
+            <img src="images/Apple_Pay_Mark_RGB_041619.jpg" alt="Apple Pay">
+            <img src="images/GPay_Acceptance_Mark_800.png" alt="Google Pay">
+            <img src="images/5_Card_CUP_color_horizontal.png" alt="Cards">
+          </div>
+
+          <button class="help-today">Help Today</button>
+        </div>
+
+        <p class="update-note">After you donate, we’ll send a direct update. You’ll know exactly what your support made possible</p>
+        <img src="images/jerry_can_yellow.png" alt="Yellow Jerry Can Icon" class="jerry-icon">
+      </div>
+
+      <div class="right-box">
+        <p>Every donation makes a real difference. Join us in creating change.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
