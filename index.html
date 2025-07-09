@@ -5,11 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>charity: water</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .right-panel .img-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .right-panel .img-row img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .img-row img.highlight {
+      max-height: 600px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .right-panel .img-row {
+        grid-template-columns: 1fr;
+      }
+      .right-panel .img-row img,
+      .img-row img.highlight {
+        max-height: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="top-bar">
-      <!-- logo-section removed as requested -->
       <img src="images/charitywater_logo_horizontal_BlackText.png" alt="charity: water logo" class="logo-top-left">
       <nav class="nav-menu">
         <a href="#">Home</a>
@@ -23,8 +51,8 @@
   </header>
 
   <main>
-    <div class="content-container">
-      <section class="left-panel">
+    <div class="content-container" style="align-items: flex-start;">
+      <section class="left-panel" style="flex: 1 1 50%; max-width: 500px;">
         <h1>Clean Water Gets Built. And It Starts Here.</h1>
         <p class="description">Give once. Change lives. Your support delivers lasting clean water and measurable impact to the people who need it most.</p>
 
@@ -49,13 +77,11 @@
         <img src="images/jerry_can_yellow.png" alt="Yellow Jerry Can Icon" class="jerry-icon">
       </section>
 
-      ...
-      <section class="right-panel">
+      <section class="right-panel" style="flex: 1 1 50%; max-width: 600px;">
         <div class="img-row">
-          <img src="images/Rwanda-2018-march-cw-cubbygraham-1088.jpg" alt="Woman and child at pump">
-          <img src="images/Madagascar_2019_CG-3756.jpg" alt="Boy drinking water">
-          <img src="images/4760_Ethiopia_2019_CG-.jpg" alt="Girl smiling">
+          <img src="images/4760_Ethiopia_2019_CG-.jpg" alt="Girl smiling" class="highlight">
           <img src="images/9342_Ethiopia_2019_CG-.jpg" alt="Drilling">
+          <img src="images/Madagascar_2019_CG-3756.jpg" alt="Boy drinking water" class="highlight">
           <img src="images/Ambote-CharityWater-09114.jpg" alt="Happy girl with clean water">
         </div>
       </section>

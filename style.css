@@ -21,17 +21,12 @@ header {
   position: relative;
 }
 
-/* Logo inside header, aligned with nav */
 .logo-top-left {
   height: 400px;
   width: auto;
-  border-radius: 0px;
-  background: transparent;
   margin-right: 24px;
-  display: block;
-  align-self: center;
 }
-/* Move nav and donate button to top right */
+
 .top-bar {
   display: flex;
   flex-direction: row;
@@ -39,24 +34,6 @@ header {
   justify-content: flex-end;
   gap: 4px;
   width: 100%;
-}
-.logo-section {
-  display: flex;
-  align-items: center;
-}
-
-.logo-icon {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
-}
-
-.logo-text {
-  display: inline;
-  font-size: 24px;
-  font-weight: 600;
-  font-family: 'Proxima Nova', Arial, sans-serif;
-  color: black;
 }
 
 .nav-menu {
@@ -111,35 +88,6 @@ main {
   margin-bottom: 20px;
   line-height: 1.2;
   text-align: center;
-}
-.amount-input {
-  background-color: var(--gray);
-  border: 1px solid #222;
-  padding: 10px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px;
-  width: 120px;
-  text-align: center;
-  color: black;
-}
-.amount-button-input {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: var(--gray);
-  border: 1px solid #222;
-  padding: 10px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px;
-  width: 120px;
-  text-align: center;
-  color: black;
-  cursor: text; /* shows text cursor, not pointer */
-}
-.amount-button-input::placeholder {
-  color: black;
-  opacity: 0.8;
 }
 
 .description {
@@ -206,28 +154,25 @@ main {
   margin-top: 10px;
 }
 
-/* Right panel grid: main image left, two stacked images right */
 .right-panel {
-  max-width: 340px; /* or any width that fits your design */
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
-  /* Remove grid properties if not needed */
 }
 
 .img-row {
-  display: flex;
-  flex-wrap: wrap;         /* Allow images to wrap to next line */
-  gap: 12px;
-  justify-content: center;
-  align-items: flex-end;
-  max-width: 100%;         /* Responsive to parent */
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
+
 .img-row img {
-  width: auto;      /* or any smaller width you prefer */
-  height: auto;      /* keeps aspect ratio */
-  max-height: 160px; /* optional: limits height */
-  border-radius: 6px;
+  width: 100%;
+  max-height: 750px;
   object-fit: contain;
-  display: block;
+  border-radius: 12px;
+}
+
+.img-row img.highlight {
+  max-height: 900px;
 }
